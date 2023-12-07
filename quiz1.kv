@@ -1,0 +1,1218 @@
+#:import BackgroundLabel_def BackgroundLabel_def
+
+
+############################################################## QUIZ: 1 ##############################################################
+
+
+<LayoutQuiz1Question1@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which of these materials cannot be recycled?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Metals'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong1')
+    
+    Button:
+        text: 'Plastic Bottles'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong1')
+
+    Button:
+        text: 'Paper and cardboard'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong1')
+
+    Button:
+        text: 'Light Bulbs'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Correct1')
+
+<LayoutQuiz1Correct1@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Because we can't separate the materials that make a light bulb, we cannot recycle them. In addition, some light bulbs contain mercury - a heavy (dangerous) metal."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz1Question2')
+
+<LayoutQuiz1Wrong1@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: [b]Light Bulbs[/b]\nBecause we can't separate the materials that make a light bulb, we cannot recycle them. In addition, some light bulbs contain mercury - a heavy (dangerous) metal."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz1Question2')
+<LayoutQuiz1Question2@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which of these is a renewable energy resource?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Coal'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong2')
+    
+    Button:
+        text: 'Nuclear Energy'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong2')
+
+    Button:
+        text: 'Natural Gas'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong2')
+
+    Button:
+        text: 'Wind Energy'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Correct2')
+
+<LayoutQuiz1Correct2@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Renewable energy sources are those abundant and continually renovating in nature, like the wind"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz1Question3')
+
+<LayoutQuiz1Wrong2@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: [b]Wind Energy[/b]\nRenewable energy sources are those abundant and continually renovating in nature, like the wind"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz1Question3')
+<LayoutQuiz1Question3@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which of the following will help you to save water?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Close taps properly and fix leaking taps, pipes & toilets'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Correct3')
+    
+    Button:
+        text: 'Flush the toilet 3 times'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong3')
+
+    Button:
+        text: 'Take long showers'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong3')
+
+    Button:
+        text: 'Leave the faucet on while you brush your teeth'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong3')
+
+<LayoutQuiz1Correct3@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "We must make sure there are no leakages in our houses and use as little water as possible: flush only once, take shorter showers, and close the faucet when brushing your teeth!"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz1Question4')
+
+<LayoutQuiz1Wrong3@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: [b]Close taps properly and fix leaking taps, pipes & toilets[/b]\nWe must make sure there are no leakages in our houses and use as little water as possible: flush only once, take shorter showers, and close the faucet when brushing your teeth!"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz1Question4')
+<LayoutQuiz1Question4@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which is the most eco-friendly mode of transportation?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Car'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong4')
+    
+    Button:
+        text: 'Bicycle'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Correct4')
+
+    Button:
+        text: 'MotorBike/Scooter'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong4')
+
+    Button:
+        text: 'Bus'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong4')
+
+<LayoutQuiz1Correct4@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Instead of burning fossil fuels that pollute and heat our planet, when we bike we are only burning calories."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz1Question5')
+
+<LayoutQuiz1Wrong4@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: [b]Bicycle[/b]\nInstead of burning fossil fuels that pollute and heat our planet, when we bike we are only burning calories."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz1Question5')
+<LayoutQuiz1Question5@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which day is Earth Day?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'March 12'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong5')
+    
+    Button:
+        text: 'October 2'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong5')
+
+    Button:
+        text: 'April 22'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Correct5')
+
+    Button:
+        text: 'May 9'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong5')
+
+<LayoutQuiz1Correct5@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The Earth Day is a day to remind us of the importance of adopting more eco-friendly lifestyles. Although it is celebrated on April 22nd, Earth Day is actually everyday!"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz1Question6')
+
+<LayoutQuiz1Wrong5@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: [b]April 22[/b]\nThe Earth Day is a day to remind us of the importance of adopting more eco-friendly lifestyles. Although it is celebrated on April 22nd, Earth Day is actually everyday!"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz1Question6')
+<LayoutQuiz1Question6@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which of the following is a greenhouse gas?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Carbon Dioxide'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong6')
+    
+    Button:
+        text: 'Methane'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong6')
+
+    Button:
+        text: 'Nitrous Oxide'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong6')
+
+    Button:
+        text: 'All of the above'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Correct6')
+
+<LayoutQuiz1Correct6@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "All of these gases trap the Sun's heat in the atmosphere!"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz1Question7')
+
+<LayoutQuiz1Wrong6@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: [b]All of the above[/b]\nAll of these gases trap the Sun's heat in the atmosphere!"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz1Question7')
+<LayoutQuiz1Question7@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which of these countries emits the most carbon dioxide?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'China'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Correct7')
+    
+    Button:
+        text: 'Russia'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong7')
+
+    Button:
+        text: 'USA'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong7')
+
+    Button:
+        text: 'Australia'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong7')
+
+<LayoutQuiz1Correct7@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "As China is growing fast and burns a lot of coal (a fossil fuel), it produces loads of carbon dioxide."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz1Question8')
+
+<LayoutQuiz1Wrong7@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: [b]China[/b]\nAs China is growing fast and burns a lot of coal (a fossil fuel), it produces loads of carbon dioxide."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz1Question8')
+<LayoutQuiz1Question8@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "How long does a Styrofoam cup take to decompose?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: '50 years'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong8')
+    
+    Button:
+        text: '100 years'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong8')
+
+    Button:
+        text: '300 years'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong8')
+
+    Button:
+        text: '500 years'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Correct8')
+
+<LayoutQuiz1Correct8@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Nature cannot degrade Styrofoam quickly and we cannot recycle this material! It is always better to refuse Styrofoam cups!"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz1Question9')
+
+<LayoutQuiz1Wrong8@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: [b]500 years[/b]\nNature cannot degrade Styrofoam quickly and we cannot recycle this material! It is always better to refuse Styrofoam cups!"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz1Question9')
+<LayoutQuiz1Question9@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "What is the most common type of trash that litters our oceans?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Cigarettes'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Correct9')
+    
+    Button:
+        text: 'Plastic Bags'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong9')
+
+    Button:
+        text: 'Beverage plastic Bottles'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong9')
+
+    Button:
+        text: 'Straws'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong9')
+
+<LayoutQuiz1Correct9@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Humans throw a lot of cigarettes everywhere and these end up in the ocean. In any case, there are loads of plastic bags and bottles, straws, and stirrers in the ocean as well! "
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz1Question10')
+
+<LayoutQuiz1Wrong9@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: [b]Cigarettes[/b]\nHumans throw a lot of cigarettes everywhere and these end up in the ocean. In any case, there are loads of plastic bags and bottles, straws, and stirrers in the ocean as well! "
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz1Question10')
+<LayoutQuiz1Question10@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "How long does it take for a glass bottle or jar to decompose?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: '100 years'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong10')
+    
+    Button:
+        text: '4,000 years'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong10')
+
+    Button:
+        text: '10,000 years'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Wrong10')
+
+    Button:
+        text: '40,000 years'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz1Correct10')
+
+<LayoutQuiz1Correct10@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "A glass bottle will take 40 centuries to decompose if it isn't recycled. Recycling a single glass bottle or jar will save enough energy to power a light bulb for four hours."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz1EndScreen')
+
+<LayoutQuiz1Wrong10@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: [b]40,000 years[/b]\nA glass bottle will take 40 centuries to decompose if it isn't recycled. Recycling a single glass bottle or jar will save enough energy to power a light bulb for four hours."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz1EndScreen')
+<LayoutQuiz1EndScreen@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CONGRATULATIONS!\n[size=15sp]Your Score Out of 10:[/size][/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: str(app.quiz_score)
+        font_name: 'fonts/Lcd.ttf'
+        font_size: '120dp'
+        #text_size: self.size
+        halign: 'center'
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 116/255, 238/255, 21/255, 1
+        markup: True
+    Button:
+        text: 'EXIT'
+        size_hint: 1, 0.15
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 1, 0, 0, 0.9
+        on_press: app.manager.special_push('QuizScreen')

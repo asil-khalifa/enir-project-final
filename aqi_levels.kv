@@ -1,0 +1,2231 @@
+<LayoutAqiMenu@ScrollView>:
+    do_scroll_x: False
+    LayoutAqiMenuChild:
+
+<LayoutAqiMenuChild@BoxLayout>:
+    size_hint_min_y: '6500dp'
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: [0, '15dp', 0, '15dp']
+    
+    Button:
+        text: "[b]NEAREST AVAILABLE STATION[/b]"
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        markup: True
+        on_press:
+            app.get_default_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    
+    Label:
+        text: 'NEARBY STATIONS'
+        font_name: 'fonts/ChrustyRock-ORLA.ttf'
+        font_size: '20dp'
+        size_hint: 1, 0.8
+        height: '100dp'
+        color: 0, 0, 0, 1
+        #48/255, 194/255, 141/255, 1
+
+
+    Button:
+        text: 'Peenya, Bangalore'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 3758
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'SaneguravaHalli, Bangalore'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 8687
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Jayanagar 5th Block, Bengaluru'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11276
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Silk Board, Bengaluru'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11293
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Chamarajanagar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12747
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Chengalpattu'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14701
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Velachery Res. Area, Chennai, Chennai'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11279
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Alandur Bus Depot, Chennai, Chennai'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12431
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Manali, Chennai, Chennai'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 8185
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Coimbatore'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14124
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Eloor'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11919
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Hosur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14147
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Kochi'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12820
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Kolar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13723
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Kollam'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12891
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Mysuru'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12439
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Ooty'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14138
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Puducherry'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13698
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Ramanagara'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12426
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Ramanathapuram'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14129
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Kariavattom, Thiruvananthapuram'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12824
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Plammoodu, Thiruvananthapuram'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 9585
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Thoothukudi'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14150
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Tirupur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14142
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    
+    Label:
+        text: 'OTHER INDIAN STATIONS'
+        font_name: 'fonts/ChrustyRock-ORLA.ttf'
+        font_size: '20dp'
+        size_hint: 1, 0.8
+        height: '100dp'
+        color: 0, 0, 0, 1
+        #48/255, 194/255, 141/255, 1
+
+    Button:
+        text: 'Agartala'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14139
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Rohta, Agra'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13873
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Sanjay Palace, Agra'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 8186
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Ahmedabad'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 8192
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Aizawl'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12809
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Ajmer'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11311
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Alwar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11866
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Ambala'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11852
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Amritsar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11321
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Anantapur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14148
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Ankleshwar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11843
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Araria'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13816
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Arrah'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13874
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Asansol'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11271
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Gurdeo Nagar, Aurangabad'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14700
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'More Chowk, Waluj, Aurangabad'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 9146
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Baddi'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14131
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Bagalkot'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12810
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Baghpat'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14141
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Ballabgarh'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12434
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Civil Lines, Bareilly'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14133
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Rajendra Nagar, Bareilly'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14132
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Bathinda'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11269
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Begusarai'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14137
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Belgaum'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14699
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Bettiah'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13819
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Bhilai'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13875
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Bhiwadi'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11848
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Bhiwani'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11849
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Bihar Sharif'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13743
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Bilaspur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13742
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Brajrajnagar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11427
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Bulandshahr'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11302
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Chandigarh'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13876
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Chandrapur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 9147
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Charkhi Dadri'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12922
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Chhapra'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13813
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Chikkamagaluru'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12811
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Damoh'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11862
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Davanagere'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13735
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Dehradun'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14698
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Pusa, Delhi, Delhi'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 10124
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Mundka, Delhi, Delhi'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 10708
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'National Institute of Malaria Research, Sector 8, Dwarka, Delhi, Delhi'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 10119
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Durgapur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 9148
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Faridabad'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12813
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Fatehabad'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11842
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Firozabad'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13734
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Gadag'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13733
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Gandhinagar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11854
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Gangtok'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14697
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Gaya'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12442
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Ghaziabad'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11899
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Gorakhpur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13730
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Greater Noida'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12463
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Guwahati'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11844
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Gwalior'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12825
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Hajipur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12818
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Hapur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11318
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Hassan'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13728
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Haveri'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14130
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Hisar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11855
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Howrah'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12450
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Hubballi'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11294
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Nacharam_TSIIC IALA, Hyderabad'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14155
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Kokapet, Hyderabad'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14127
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'New Malakpet, Hyderabad'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14135
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Imphal'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14145
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Jabalpur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12427
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Jaipur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11291
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Jalandhar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11299
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Jhansi'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13877
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Jind'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11853
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Jodhpur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12433
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Jorapokhar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11292
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Kaithal'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11858
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Kalaburagi'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11298
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Kalyan'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12462
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Kannur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12819
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Kanpur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13725
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Karnal'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11857
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Katihar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13812
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Khurja'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14153
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Kishanganj'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13811
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Kohima'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13724
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Rabindra Bharati University, Kolkata'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 9145
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Bidhannagar, Kolkata'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12745
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Kolkata US Consulate'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 7021
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Koppal'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13722
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Kota'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11285
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Kurukshetra'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11851
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Lalbagh, West Lucknow, Lucknow'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 8673
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Kukrail Picnic Spot-1, Lucknow'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13720
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Ludhiana'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11272
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Maihar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11864
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Mandi Gobindgarh'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11322
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Mandikhera'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11920
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Manesar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12445
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Mangalore'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13718
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Manguraha'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13878
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Meerut'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11963
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Employment Office, Moradabad'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13717
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Transport Nagar, Moradabad'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14143
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Motihari'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13716
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Chhatrapati Shivaji Intl. Airport (T2), Mumbai'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12456
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Borivali East, Mumbai'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12460
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Khindipada-Bhandup West, Mumbai'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13710
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Vasai West, Mumbai'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12453
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Mumbai US Consulate'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 7020
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Munger'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13705
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Muzaffarnagar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11277
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'MIT-Daudpur Kothi, Muzaffarpur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13703
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Buddha Colony, Muzaffarpur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13704
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Muzaffarpur Collectorate, Muzaffarpur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 8681
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Nagpur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12444
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Naharlagun'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13802
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Nandesari'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12823
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Narnaul'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11846
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Nashik'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11283
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Pali'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11289
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Panipat'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11845
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Patiala'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11282
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Rajbansi Nagar, Patna'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12743
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Muradpur, Patna'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12744
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Nagar Nigam, Prayagraj'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13699
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Jhunsi, Prayagraj'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13701
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Purnia'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13804
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Raichur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13697
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Rajamahendravaram'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11303
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Rajgir'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13810
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Ratlam'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11860
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Rupnagar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11310
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Sagar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12821
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Saharsa'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13801
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Samastipur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14154
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Sasaram'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13696
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Shillong'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14136
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Shivamogga'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13695
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Siliguri'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11290
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Sirsa'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11850
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Sivasagar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14696
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Siwan'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13879
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Solapur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 8729
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Sonipat'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11861
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Srinagar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13694
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Talcher'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11288
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Thrissur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13693
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Udaipur'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11314
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Udupi'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 14207
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Vapi'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12448
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Varanasi'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13690
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Vatva'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12451
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Vijayapura'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 12827
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Vrindavan'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 13689
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+    Button:
+        text: 'Yamuna Nagar'
+        size_hint: 0.8, 0.7
+        #height = '100dp'
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        font_size: '15dp'
+        on_press:
+            app.station = 11841
+            app.get_aqi_info()
+            app.manager.push('AqiInfoScreen')
+
+
+####################################### LAYOUT AQI INFO SCREEN ##########################################3
+<LayoutAqiInfo@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: app.station_name
+        size_hint: 1, 0.2
+        font_size: '17dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: app.aqi_display_text
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'BACK'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.pop()

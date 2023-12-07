@@ -1,0 +1,2868 @@
+#:import BackgroundLabel_def BackgroundLabel_def
+
+
+<LayoutQuiz5Question1@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which of the following is not the physical quality parameter of water?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Turbidity'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong1')
+    
+    Button:
+        text: 'Odour'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong1')
+
+    Button:
+        text: 'Hardness'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct1')
+
+    Button:
+        text: 'Temperature'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong1')
+
+<LayoutQuiz5Correct1@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question2')
+
+<LayoutQuiz5Wrong1@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Hardness\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question2')
+<LayoutQuiz5Question2@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Non point sources of water pollution are:"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'runoff from farms'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct2')
+    
+    Button:
+        text: 'Power plants'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong2')
+
+    Button:
+        text: 'Outfall Sewer'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong2')
+
+    Button:
+        text: 'Industrial Effluent'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong2')
+
+<LayoutQuiz5Correct2@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question3')
+
+<LayoutQuiz5Wrong2@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: runoff from farms\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question3')
+<LayoutQuiz5Question3@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Point source of water pollution is:"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Power plants'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct3')
+    
+    Button:
+        text: 'Agricultural Runoff'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong3')
+
+    Button:
+        text: 'Overflowing drains'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong3')
+
+    Button:
+        text: 'Atmospheric deposition'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong3')
+
+<LayoutQuiz5Correct3@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question4')
+
+<LayoutQuiz5Wrong3@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Power plants"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question4')
+<LayoutQuiz5Question4@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Hardness in water due to presence of"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Calcium ions'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong4')
+    
+    Button:
+        text: 'Magnesium ions'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong4')
+
+    Button:
+        text: 'none of the Above'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong4')
+
+    Button:
+        text: 'Both of the above'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct4')
+
+<LayoutQuiz5Correct4@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question5')
+
+<LayoutQuiz5Wrong4@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: 4\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question5')
+<LayoutQuiz5Question5@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Major sink or receptor of all pollutants is:"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Ocean'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct5')
+    
+    Button:
+        text: 'River'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong5')
+
+    Button:
+        text: 'Lake'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong5')
+
+    Button:
+        text: 'Pond'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong5')
+
+<LayoutQuiz5Correct5@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question6')
+
+<LayoutQuiz5Wrong5@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Ocean\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question6')
+<LayoutQuiz5Question6@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which of the following is not a measure of sustainable water management?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Preventing leakage from dams and canals'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong6')
+    
+    Button:
+        text: 'Reducing the rate of surface run-off water.'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct6')
+
+    Button:
+        text: 'Preventing loss in the municipal pipes.'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong6')
+
+    Button:
+        text: 'Building small reservoirs in place of a few mega projects'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong6')
+
+<LayoutQuiz5Correct6@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question7')
+
+<LayoutQuiz5Wrong6@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Reducing the rate of surface run-off water.\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question7')
+<LayoutQuiz5Question7@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "What are the number of biodiversity hotspots in the world?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: '18'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong7')
+    
+    Button:
+        text: '28'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong7')
+
+    Button:
+        text: '32'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong7')
+
+    Button:
+        text: '36'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct7')
+
+<LayoutQuiz5Correct7@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question8')
+
+<LayoutQuiz5Wrong7@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: 36"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question8')
+<LayoutQuiz5Question8@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "The major part of the extinction of species occurs in which of the following bio-rich areas?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Tropical forests'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong8')
+    
+    Button:
+        text: 'Wetlands'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong8')
+
+    Button:
+        text: 'Coral Reefs'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong8')
+
+    Button:
+        text: 'All of the above'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct8')
+
+<LayoutQuiz5Correct8@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question9')
+
+<LayoutQuiz5Wrong8@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: 4\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question9')
+<LayoutQuiz5Question9@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which of the following species is used in indigenous medicine?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Zizyphus'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong9')
+    
+    Button:
+        text: 'Tamarind'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong9')
+
+    Button:
+        text: 'Babul'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong9')
+
+    Button:
+        text: 'None of the above'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct9')
+
+<LayoutQuiz5Correct9@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question10')
+
+<LayoutQuiz5Wrong9@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: None of the above\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question10')
+<LayoutQuiz5Question10@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "The most frequent and naturally occruing disaster is:"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Drought'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong10')
+    
+    Button:
+        text: 'Tsunami'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong10')
+
+    Button:
+        text: 'Flood'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct10')
+
+    Button:
+        text: 'Earthquake'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong10')
+
+<LayoutQuiz5Correct10@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question11')
+
+<LayoutQuiz5Wrong10@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Flood\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question11')
+<LayoutQuiz5Question11@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "The worst natural hazards in the tropics are:"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Tropical cyclones'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct11')
+    
+    Button:
+        text: 'Tsunami'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong11')
+
+    Button:
+        text: 'Floods'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong11')
+
+    Button:
+        text: 'None of the above'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong11')
+
+<LayoutQuiz5Correct11@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question12')
+
+<LayoutQuiz5Wrong11@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Tropical cyclones\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question12')
+<LayoutQuiz5Question12@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which element present in the drinking water can lead to various fatal diseases?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Calcium'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong12')
+    
+    Button:
+        text: 'Arsenic'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct12')
+
+    Button:
+        text: 'Phophorous'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong12')
+
+    Button:
+        text: 'None of the above'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong12')
+
+<LayoutQuiz5Correct12@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question13')
+
+<LayoutQuiz5Wrong12@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Arsenic\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question13')
+<LayoutQuiz5Question13@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Hepatitis A is a type of:"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Water-borne disease'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong13')
+    
+    Button:
+        text: 'Air-borne disease'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong13')
+
+    Button:
+        text: 'Food contamination'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong13')
+
+    Button:
+        text: 'Both a and c'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct13')
+
+<LayoutQuiz5Correct13@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question14')
+
+<LayoutQuiz5Wrong13@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Both a and c\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question14')
+<LayoutQuiz5Question14@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Areas that are under the influence of DDT may observe a decline in the population of birds. This is due to the fact that"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Birds stopped laying eggs altogether'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong14')
+    
+    Button:
+        text: 'The eggs did not hatch'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct14')
+
+    Button:
+        text: 'Predation of the eggs increased'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong14')
+
+    Button:
+        text: 'None of the above'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong14')
+
+<LayoutQuiz5Correct14@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question15')
+
+<LayoutQuiz5Wrong14@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: The eggs did not hatch\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question15')
+<LayoutQuiz5Question15@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Measuring BOD (Biological Oxygen Demand) is primarily used for:"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Estimating the types of microbes'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong15')
+    
+    Button:
+        text: 'Determine the level of dissovled oxygen'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong15')
+
+    Button:
+        text: 'Estimating the quantity of organic matter in sewage water'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct15')
+
+    Button:
+        text: 'None of the above'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong15')
+
+<LayoutQuiz5Correct15@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question16')
+
+<LayoutQuiz5Wrong15@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Estimating the quantity of organic matter in sewage water\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question16')
+<LayoutQuiz5Question16@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Cosmic rays, such as gamma rays are a source of "
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Soil Pollution'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong16')
+    
+    Button:
+        text: 'Nosie Polluiton'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong16')
+
+    Button:
+        text: 'Thermal Pollution'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong16')
+
+    Button:
+        text: 'Radiation Pollution'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct16')
+
+<LayoutQuiz5Correct16@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question17')
+
+<LayoutQuiz5Wrong16@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Radiation Pollution\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question17')
+<LayoutQuiz5Question17@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "The presence of what in a water body is an indicator of water pollution?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Zygosporangium'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong17')
+    
+    Button:
+        text: 'E-coli'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct17')
+
+    Button:
+        text: 'Deinococcus radiodurans'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong17')
+
+    Button:
+        text: 'None of the above'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong17')
+
+<LayoutQuiz5Correct17@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question18')
+
+<LayoutQuiz5Wrong17@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: E-coli\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question18')
+<LayoutQuiz5Question18@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Eggshells of birds become unusually thin when exposed to the pesticides in their environment. The protein that gets affected is "
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Calmodulin'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct18')
+    
+    Button:
+        text: 'Cysteine'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong18')
+
+    Button:
+        text: 'Serine'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong18')
+
+    Button:
+        text: 'None of the above'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong18')
+
+<LayoutQuiz5Correct18@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question19')
+
+<LayoutQuiz5Wrong18@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Calmodulin\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question19')
+<LayoutQuiz5Question19@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which of the following places is termed as 'Cold Desert' of Our Country?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Ladakh'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong19')
+    
+    Button:
+        text: 'Leh'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong19')
+
+    Button:
+        text: 'Ooty'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong19')
+
+    Button:
+        text: 'Manali'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct19')
+
+<LayoutQuiz5Correct19@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question20')
+
+<LayoutQuiz5Wrong19@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Manali\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question20')
+<LayoutQuiz5Question20@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which of the following disease can be caused by stagnant water"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Chicken Pox'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong20')
+    
+    Button:
+        text: 'Pneumonia'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong20')
+
+    Button:
+        text: 'Malaria'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct20')
+
+    Button:
+        text: 'Polio'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong20')
+
+<LayoutQuiz5Correct20@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question21')
+
+<LayoutQuiz5Wrong20@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Malaria\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question21')
+<LayoutQuiz5Question21@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which of the following is not a major source of groundwater contamination?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Agricultural Products'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong21')
+    
+    Button:
+        text: 'Underground Storage Tanks'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct21')
+
+    Button:
+        text: 'landfills'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong21')
+
+    Button:
+        text: 'All of the above'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong21')
+
+<LayoutQuiz5Correct21@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question22')
+
+<LayoutQuiz5Wrong21@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Underground Storage Tanks\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question22')
+<LayoutQuiz5Question22@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which of the following is the cause of Melarnornia (skin cancer)?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Acid Rain'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong22')
+    
+    Button:
+        text: 'Allergens'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong22')
+
+    Button:
+        text: 'Ozone Depletion'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct22')
+
+    Button:
+        text: 'None of the above'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong22')
+
+<LayoutQuiz5Correct22@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question23')
+
+<LayoutQuiz5Wrong22@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Ozone Depletion\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question23')
+<LayoutQuiz5Question23@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "The yellowness of Taj Mahal is an effect of:"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Acid rain'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct23')
+    
+    Button:
+        text: 'Allergens'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong23')
+
+    Button:
+        text: 'Ozone depletion'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong23')
+
+    Button:
+        text: 'None of the above'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong23')
+
+<LayoutQuiz5Correct23@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5Question24')
+
+<LayoutQuiz5Wrong23@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Acid rain\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5Question24')
+<LayoutQuiz5Question24@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "The part of the plant that evaporates water is:"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Fruit'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong24')
+    
+    Button:
+        text: 'Stomata'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Correct24')
+
+    Button:
+        text: 'Root'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong24')
+
+    Button:
+        text: 'None of the above'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz5Wrong24')
+
+<LayoutQuiz5Correct24@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: ""
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz5EndScreen')
+
+<LayoutQuiz5Wrong24@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Stomata\n"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz5EndScreen')
+
+<LayoutQuiz5EndScreen@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CONGRATULATIONS!\n[size=15sp]Your Score Out of 24:[/size][/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: str(app.quiz_score)
+        font_name: 'fonts/Lcd.ttf'
+        font_size: '120dp'
+        #text_size: self.size
+        halign: 'center'
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 116/255, 238/255, 21/255, 1
+        markup: True
+    Button:
+        text: 'EXIT'
+        size_hint: 1, 0.15
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 1, 0, 0, 0.9
+        on_press: app.manager.special_push('QuizScreen')

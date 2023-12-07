@@ -1,0 +1,1214 @@
+#:import BackgroundLabel_def BackgroundLabel_def
+
+<LayoutQuiz4Question1@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "What is the primary source of air pollution in urban areas?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Industrial emissions'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong1')
+    
+    Button:
+        text: 'Agricultural Activities'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong1')
+
+    Button:
+        text: 'Vehicle Exhaust'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Correct1')
+
+    Button:
+        text: 'Deforestation'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong1')
+
+<LayoutQuiz4Correct1@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: " Cars and other vehicles emit pollutants like nitrogen oxides and particulate matter, contributing significantly to urban air pollution."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz4Question2')
+
+<LayoutQuiz4Wrong1@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Vehicle Exhaust\n Cars and other vehicles emit pollutants like nitrogen oxides and particulate matter, contributing significantly to urban air pollution."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz4Question2')
+<LayoutQuiz4Question2@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which greenhouse gas is primarily responsible for global warming?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Carbon Monoxide'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong2')
+    
+    Button:
+        text: 'Methane'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Correct2')
+
+    Button:
+        text: 'Ozone'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong2')
+
+    Button:
+        text: 'Nitrous Oxide'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong2')
+
+<LayoutQuiz4Correct2@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: " Methane is a potent greenhouse gas with a higher warming potential compared to others."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz4Question3')
+
+<LayoutQuiz4Wrong2@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Methane\n Methane is a potent greenhouse gas with a higher warming potential compared to others."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz4Question3')
+<LayoutQuiz4Question3@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "What is eutrophication mainly caused by?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Air Pollution'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong3')
+    
+    Button:
+        text: 'Soil Erosion'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong3')
+
+    Button:
+        text: 'Excessive Nutrient runoff'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Correct3')
+
+    Button:
+        text: 'Deforestation'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong3')
+
+<LayoutQuiz4Correct3@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Eutrophication occurs when water bodies receive excessive nutrients, often from agricultural runoff, leading to algal blooms and oxygen depletion."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz4Question4')
+
+<LayoutQuiz4Wrong3@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Excessive Nutrient runoff\nEutrophication occurs when water bodies receive excessive nutrients, often from agricultural runoff, leading to algal blooms and oxygen depletion."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz4Question4')
+<LayoutQuiz4Question4@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "What is a major consequence of plastic pollution in oceans?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Reduced fish populations'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Correct4')
+    
+    Button:
+        text: 'Increased coral growth'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong4')
+
+    Button:
+        text: 'Enchanced marine biodiversity'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong4')
+
+    Button:
+        text: 'Improved water quality'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong4')
+
+<LayoutQuiz4Correct4@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Plastics in oceans can harm marine life, including fish, through ingestion and entanglement."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz4Question5')
+
+<LayoutQuiz4Wrong4@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Reduced fish populations\nPlastics in oceans can harm marine life, including fish, through ingestion and entanglement."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz4Question5')
+<LayoutQuiz4Question5@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which indoor air pollutant is commonly released by household items like paints and cleaning products?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Carbon Dioxide'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong5')
+    
+    Button:
+        text: 'Radon'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong5')
+
+    Button:
+        text: 'Volatile organic compounds (VOCs)'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Correct5')
+
+    Button:
+        text: 'Sulphur Dioxide'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong5')
+
+<LayoutQuiz4Correct5@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "VOCs are emitted by various household items and can contribute to indoor air pollution."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz4Question6')
+
+<LayoutQuiz4Wrong5@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Volatile organic compounds (VOCs)\nVOCs are emitted by various household items and can contribute to indoor air pollution."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz4Question6')
+<LayoutQuiz4Question6@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "What is the primary cause of acid rain?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Industrial emissions'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Correct6')
+    
+    Button:
+        text: 'Deforestation'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong6')
+
+    Button:
+        text: 'Agricultural runoff'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong6')
+
+    Button:
+        text: 'Greenhouse gas emissions'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong6')
+
+<LayoutQuiz4Correct6@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Acid rain is caused by the release of sulfur dioxide and nitrogen oxides from industrial sources, which react with atmospheric water."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz4Question7')
+
+<LayoutQuiz4Wrong6@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Industrial emissions\nAcid rain is caused by the release of sulfur dioxide and nitrogen oxides from industrial sources, which react with atmospheric water."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz4Question7')
+<LayoutQuiz4Question7@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which of the following is a non-point source of water pollution?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Wastewater treatment plant'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong7')
+    
+    Button:
+        text: 'Industrial discharge pipe'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong7')
+
+    Button:
+        text: 'Oil spill from a tanker'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong7')
+
+    Button:
+        text: 'Agricultural runoff'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Correct7')
+
+<LayoutQuiz4Correct7@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Non-point sources are diffuse, and in this case, agricultural runoff carries pollutants into water bodies."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz4Question8')
+
+<LayoutQuiz4Wrong7@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Agricultural runoff\nNon-point sources are diffuse, and in this case, agricultural runoff carries pollutants into water bodies."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz4Question8')
+<LayoutQuiz4Question8@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "What is the main component of smog in urban areas?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Carbon dioxide'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong8')
+    
+    Button:
+        text: 'Sulphur Dioxide'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong8')
+
+    Button:
+        text: 'Ozone'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Correct8')
+
+    Button:
+        text: 'Nitrogen dioxide'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong8')
+
+<LayoutQuiz4Correct8@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Ozone is a key component of smog, forming when pollutants react in the presence of sunlight."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz4Question9')
+
+<LayoutQuiz4Wrong8@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Ozone\nOzone is a key component of smog, forming when pollutants react in the presence of sunlight."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz4Question9')
+<LayoutQuiz4Question9@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which layer of the atmosphere is affected by the depletion of the ozone layer?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Troposphere'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong9')
+    
+    Button:
+        text: 'Stratosphere'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Correct9')
+
+    Button:
+        text: 'Mesosphere'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong9')
+
+    Button:
+        text: 'Exosphere'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong9')
+
+<LayoutQuiz4Correct9@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The ozone layer is located in the stratosphere, and its depletion allows more harmful ultraviolet (UV) radiation to reach Earth's surface."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz4Question10')
+
+<LayoutQuiz4Wrong9@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Stratosphere\nThe ozone layer is located in the stratosphere, and its depletion allows more harmful ultraviolet (UV) radiation to reach Earth's surface."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz4Question10')
+<LayoutQuiz4Question10@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "What is the primary cause of soil pollution in urban areas?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Industrial discharges'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong10')
+    
+    Button:
+        text: 'Pesticide use'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Correct10')
+
+    Button:
+        text: 'Deforestation'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong10')
+
+    Button:
+        text: 'Volcanic eruptions'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz4Wrong10')
+
+<LayoutQuiz4Correct10@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The use of pesticides in agriculture is a significant contributor to soil pollution, impacting soil health and ecosystems."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz4EndScreen')
+
+<LayoutQuiz4Wrong10@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Pesticide use\nThe use of pesticides in agriculture is a significant contributor to soil pollution, impacting soil health and ecosystems."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz4EndScreen')
+<LayoutQuiz4EndScreen@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CONGRATULATIONS!\n[size=15sp]Your Score Out of 10:[/size][/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: str(app.quiz_score)
+        font_name: 'fonts/Lcd.ttf'
+        font_size: '120dp'
+        #text_size: self.size
+        halign: 'center'
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 116/255, 238/255, 21/255, 1
+        markup: True
+    Button:
+        text: 'EXIT'
+        size_hint: 1, 0.15
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 1, 0, 0, 0.9
+        on_press: app.manager.special_push('QuizScreen')

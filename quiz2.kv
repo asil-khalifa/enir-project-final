@@ -1,0 +1,742 @@
+#:import BackgroundLabel_def BackgroundLabel_def
+
+<LayoutQuiz2Question1@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "What is India's position in coal production in the world?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: '1'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong1')
+    
+    Button:
+        text: '2'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Correct1')
+
+    Button:
+        text: '3'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong1')
+
+    Button:
+        text: '4'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong1')
+
+<LayoutQuiz2Correct1@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "India has large coal resources."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz2Question2')
+
+<LayoutQuiz2Wrong1@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: 2\nIndia has large coal resources."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz2Question2')
+<LayoutQuiz2Question2@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "What is percentage of Carbon content in Lignite?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: '80 to 95'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong2')
+    
+    Button:
+        text: '60 to 80'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong2')
+
+    Button:
+        text: '40 to 55'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Correct2')
+
+    Button:
+        text: 'less than 40'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong2')
+
+<LayoutQuiz2Correct2@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "It is an intermediate stage which happens during the alteration of woody matter into coal. It has high moisture content so it gives smoke when burnt."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz2Question3')
+
+<LayoutQuiz2Wrong2@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: 40 to 55\nIt is an intermediate stage which happens during the alteration of woody matter into coal. It has high moisture content so it gives smoke when burnt."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz2Question3')
+<LayoutQuiz2Question3@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "When was basically all of Indian coal reserves formed?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: "COVID Era"
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong3')
+    
+    Button:
+        text: 'Gondwana Period'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Correct3')
+
+    Button:
+        text: 'Tertiary Period'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong3')
+
+    Button:
+        text: 'Indurstrial Revolution'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong3')
+
+<LayoutQuiz2Correct3@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Around 98 % of India's total coal reserves are from Gondwana times."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz2Question4')
+
+<LayoutQuiz2Wrong3@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Gondwana Period\nAround 98 % of India's total coal reserves are from Gondwana times"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz2Question4')
+<LayoutQuiz2Question4@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "what causes itai itai disease?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Mercury'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong4')
+    
+    Button:
+        text: 'Cadmium'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Correct4')
+
+    Button:
+        text: 'Lead'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong4')
+
+    Button:
+        text: 'Fluorine'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong4')
+
+<LayoutQuiz2Correct4@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Water contaminated with cadmium can cause itai itai disease also called ouch-ouch disease (a painful disease of bones and joints) and cancer of lungs and liver."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz2Question5')
+
+<LayoutQuiz2Wrong4@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Cadmium\nWater contaminated with cadmium can cause itai itai disease also called ouch-ouch disease (a painful disease of bones and joints) and cancer of lungs and liver."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz2Question5')
+<LayoutQuiz2Question5@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which of the below are [b]NOT[/b] means of thermochemical conversion to biomass?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Anaerobic Digestion'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Correct5')
+    
+    Button:
+        text: 'pyrolysis'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong5')
+
+    Button:
+        text: 'gasification'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong5')
+
+    Button:
+        text: 'combustion'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong5')
+
+<LayoutQuiz2Correct5@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Combustion, pyrolysis and gasification are methods of thermochemical conversion"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz2Question6')
+
+<LayoutQuiz2Wrong5@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Anaerobic Digestion\nCombustion, pyrolysis and gasification are methods of thermochemical conversion"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz2Question6')
+<LayoutQuiz2Question6@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "As of 2022 what percentage of indian electricity is from renewable sources?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: '1'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong6')
+    
+    Button:
+        text: '20'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Correct6')
+
+    Button:
+        text: '50'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong6')
+
+    Button:
+        text: '90'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz2Wrong6')
+
+<LayoutQuiz2Correct6@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "This is statistically found"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz2EndScreen')
+
+<LayoutQuiz2Wrong6@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: 20\nThis is statistically found"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz2EndScreen')
+<LayoutQuiz2EndScreen@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CONGRATULATIONS!\n[size=15sp]Your Score Out of 6:[/size][/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: str(app.quiz_score)
+        font_name: 'fonts/Lcd.ttf'
+        font_size: '120dp'
+        #text_size: self.size
+        halign: 'center'
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 116/255, 238/255, 21/255, 1
+        markup: True
+    Button:
+        text: 'EXIT'
+        size_hint: 1, 0.15
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 1, 0, 0, 0.9
+        on_press: app.manager.special_push('QuizScreen')

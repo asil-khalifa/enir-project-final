@@ -1,0 +1,1214 @@
+#:import BackgroundLabel_def BackgroundLabel_def
+
+<LayoutQuiz3Question1@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "How can individuals contribute to reducing air pollution from transportation?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Drive alone in a car'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong1')
+    
+    Button:
+        text: 'Use public transportation or carpool'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Correct1')
+
+    Button:
+        text: 'Increase fuel consumption'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong1')
+
+    Button:
+        text: 'Run vehicles without regular maintenance'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong1')
+
+<LayoutQuiz3Correct1@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "By carpooling, we reduce the carbon footprint per person"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz3Question2')
+
+<LayoutQuiz3Wrong1@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Use public transportation or carpool\nBy carpooling, we reduce the carbon footprint per person"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz3Question2')
+<LayoutQuiz3Question2@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "What is a sustainable practice to minimize plastic pollution?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Use single use plastics'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong2')
+    
+    Button:
+        text: 'Dispose of plastic waste in rivers'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong2')
+
+    Button:
+        text: 'Recycle plastics'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Correct2')
+
+    Button:
+        text: 'Burn plastic waste'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong2')
+
+<LayoutQuiz3Correct2@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Plastic is a major source of pollution and by recycling we reduce the amount of plastic thrown into landfills"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz3Question3')
+
+<LayoutQuiz3Wrong2@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Recycle plastics\nPlastic is a major source of pollution and by recycling we reduce the amount of plastic thrown into landfills"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz3Question3')
+<LayoutQuiz3Question3@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "What is a key strategy for reducing water pollution in rivers and lakes?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Dump industrial waste directly into water bodies '
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong3')
+    
+    Button:
+        text: 'Promote responsible disposal of household chemicals'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Correct3')
+
+    Button:
+        text: 'Increase agricultural runoff'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong3')
+
+    Button:
+        text: 'Encourage oil spills'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong3')
+
+<LayoutQuiz3Correct3@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Household chemicals cause water pollution and hence one should be responsible when disposing them"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz3Question4')
+
+<LayoutQuiz3Wrong3@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Promote responsible disposal of household chemicals\nHousehold chemicals cause water pollution and hence one should be responsible when disposing them"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz3Question4')
+<LayoutQuiz3Question4@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "How can we reduce soil pollution caused by agricultural activities?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Use excessive pesticides and fertilizers'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong4')
+    
+    Button:
+        text: 'Implement sustainable farming practices'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Correct4')
+
+    Button:
+        text: 'Dump industrial waste on agricultural land'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong4')
+
+    Button:
+        text: 'Avoid proper waste disposal'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong4')
+
+<LayoutQuiz3Correct4@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Implementing sustainable farming practices is imperative for safeguarding the environment, conserving natural resources, and ensuring long-term food security."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz3Question5')
+
+<LayoutQuiz3Wrong4@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Implement sustainable farming practices\nImplementing sustainable farming practices is imperative for safeguarding the environment, conserving natural resources, and ensuring long-term food security."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz3Question5')
+<LayoutQuiz3Question5@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "Which energy source helps in reducing air pollution and greenhouse gas emissions?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Burning coal'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong5')
+    
+    Button:
+        text: 'Natural gas'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong5')
+
+    Button:
+        text: 'Solar power'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Correct5')
+
+    Button:
+        text: 'Diesel Generators'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong5')
+
+<LayoutQuiz3Correct5@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Solar panels help reduce air pollution and greenhouse gas emissions by generating electricity through a clean, renewable energy source-the sun. Unlike conventional power generation methods like burning fossil fuels, solar panels produce electricity without emitting harmful pollutants or greenhouse gases. "
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz3Question6')
+
+<LayoutQuiz3Wrong5@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Solar power\nSolar panels help reduce air pollution and greenhouse gas emissions by generating electricity through a clean, renewable energy source-the sun. Unlike conventional power generation methods like burning fossil fuels, solar panels produce electricity without emitting harmful pollutants or greenhouse gases. "
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz3Question6')
+<LayoutQuiz3Question6@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "What action can help mitigate noise pollution in urban areas?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Increase loud industrial activities'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong6')
+    
+    Button:
+        text: 'Plant more trees along highways'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Correct6')
+
+    Button:
+        text: 'Ignore noise regulations'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong6')
+
+    Button:
+        text: 'Use louder construction equipment'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong6')
+
+<LayoutQuiz3Correct6@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Trees help absorb noise"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz3Question7')
+
+<LayoutQuiz3Wrong6@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Plant more trees along highways\nTrees help absorb noise"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz3Question7')
+<LayoutQuiz3Question7@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "How can individuals contribute to reducing light pollution?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Use excessive outdoor lighting'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong7')
+    
+    Button:
+        text: 'Install brighter streetlights'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong7')
+
+    Button:
+        text: 'Turn off unnecessary lights'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Correct7')
+
+    Button:
+        text: 'Ignore light pollution regulations'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong7')
+
+<LayoutQuiz3Correct7@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Too many unwanted lights is the root cause of light pollution. It also helps in saving energy."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz3Question8')
+
+<LayoutQuiz3Wrong7@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Turn off unnecessary lights\nToo many unwanted lights is the root cause of light pollution. It also helps in saving energy."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz3Question8')
+<LayoutQuiz3Question8@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "What is an effective way to reduce pollution from electronic waste?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Discard electronics in regular household waste'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong8')
+    
+    Button:
+        text: 'Promote proper e-waste recycling'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Correct8')
+
+    Button:
+        text: 'Export e-waste to developing countries'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong8')
+
+    Button:
+        text: 'Avoid recycling old electronic devices'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong8')
+
+<LayoutQuiz3Correct8@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "Recycling e-waste helps prevent the release of toxic substances into the environment, reducing soil and water contamination. "
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz3Question9')
+
+<LayoutQuiz3Wrong8@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Promote proper e-waste recycling\nRecycling e-waste helps prevent the release of toxic substances into the environment, reducing soil and water contamination. "
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz3Question9')
+<LayoutQuiz3Question9@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "How can urban planning contribute to reducing pollution?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Increase traffic congestion'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong9')
+    
+    Button:
+        text: 'Encourage mixed land use and efficient public transport'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Correct9')
+
+    Button:
+        text: 'Neglect green spaces and parks'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong9')
+
+    Button:
+        text: 'Ignore zoning regulations'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong9')
+
+<LayoutQuiz3Correct9@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: " By promoting a combination of mixed land use and accessible public transportation, cities can enhance overall mobility, reduce air pollution, and create more resilient and livable urban environments."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz3Question10')
+
+<LayoutQuiz3Wrong9@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Encourage mixed land use and efficient public transport\n By promoting a combination of mixed land use and accessible public transportation, cities can enhance overall mobility, reduce air pollution, and create more resilient and livable urban environments."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz3Question10')
+<LayoutQuiz3Question10@BoxLayout>:
+    
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: '10dp'
+
+    BackgroundLabel:
+        text: "What is a sustainable practice to minimize air pollution from industries?"
+        size_hint: 1, 1
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.1, None
+        size: self.texture_size
+        markup: True
+
+    Button:
+        text: 'Implement outdated technologies'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong10')
+    
+    Button:
+        text: 'Use pollution control devices'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Correct10')
+
+    Button:
+        text: 'Ignore emission standards'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong10')
+
+    Button:
+        text: 'Discharge untreated industrial effluents'
+        size_hint: 0.8, 0.7
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        text_size: root.width/1.5, None
+        on_release: app.manager.special_push('Quiz3Wrong10')
+
+<LayoutQuiz3Correct10@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CORRECT![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "These devices ensure that the harmful particles and gases are removed before exhausting gases from industries"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.quiz_score = app.quiz_score +1
+            app.manager.special_push('Quiz3EndScreen')
+
+<LayoutQuiz3Wrong10@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]WRONG![/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 1, 0, 0, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "The correct answer is: Use pollution control devices\nThese devices ensure that the harmful particles and gases are removed before exhausting gases from industries"
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'NEXT'
+        size_hint: 0.5, 0.15
+        pos_hint: {'right':1}
+        background_normal: ''
+        background_color: 1, 0, 1, 1
+        on_press:
+            app.manager.special_push('Quiz3EndScreen')
+<LayoutQuiz3EndScreen@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]CONGRATULATIONS!\n[size=15sp]Your Score Out of 10:[/size][/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: str(app.quiz_score)
+        font_name: 'fonts/Lcd.ttf'
+        font_size: '120dp'
+        #text_size: self.size
+        halign: 'center'
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 116/255, 238/255, 21/255, 1
+        markup: True
+    Button:
+        text: 'EXIT'
+        size_hint: 1, 0.15
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 1, 0, 0, 0.9
+        on_press: app.manager.special_push('QuizScreen')

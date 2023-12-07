@@ -1,0 +1,128 @@
+#THIS IS FOR STUDY MATERIAL
+#:import BackgroundLabel_def BackgroundLabel_def
+
+<TabLayoutExample@TabbedPanel>:
+    
+    do_default_tab: False
+    tab_width: self.parent.width / 2.2
+    #if the value by which we divide is "x" (including floats), we'll be able to see x bars in one go
+
+    TabbedPanelItem:
+        background_color: 4/255, 63/255, 87/255, 1
+        background_normal: ''
+        text: 'Pollution'
+        #background_color: 1, 1, 1, 1
+        EnvironmentalPollution:
+
+    TabbedPanelItem:
+        background_color: 4/255, 63/255, 87/255, 1
+        background_normal: ''
+        text: 'Recycling'
+        Recycling:
+
+    TabbedPanelItem:
+        background_color: 4/255, 63/255, 87/255, 1
+        background_normal: ''
+        text: 'Landfill Management'
+        LandfillManagement:
+
+    TabbedPanelItem:
+        background_color: 4/255, 63/255, 87/255, 1
+        background_normal: ''
+        text: 'Waste-to-Energy'
+        WasteToEnergy:
+
+<EnvironmentalPollution@ScrollView>:
+    do_scroll_x: False
+    EnvironmentalPollutionChild:
+
+<EnvironmentalPollutionChild@BoxLayout>:
+    size_hint_min_y: '650dp'
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+
+    BackgroundLabel:
+        text: '[b]POLLUTION[/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "[b]Pollution[/b] is the introduction of harmful contaminants into the environment, adversely affecting air, water, soil, and living organisms. \n\n[b]Water Pollution[/b]:\nContaminants enter rivers, lakes, oceans.\nSources: industrial discharges, agriculture runoff, improper waste disposal.\n\n[b]Soil Pollution[/b]:\nPollutants from industry, waste, pesticides.\nImpacts soil fertility, crops, and ecosystems.\n\n[b]Noise Pollution[/b]:\nExcessive, disturbing noise in the environment.\nSources: traffic, machinery, events.\n\n[b]Light Pollution[/b]:\nExcessive artificial light, disrupts ecosystems.\nSources: streetlights, signage, urban lighting."
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+
+<Recycling@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]RECYCLING[/b]'
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        size_hint: 1, 0.2
+        markup: True
+    Image:
+        source: 'images/recycling2.jpeg'
+        allow_stretch: True
+        #keep_ratio: False
+
+<LandfillManagement@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        background_color: 48/255, 194/255, 141/255, 1
+        text: '[b]LANDFILL MANAGEMENT[/b]'
+        font_size: '20dp'
+        size_hint: 1, 0.2
+        markup: True
+    Image:
+        source: 'images/landfill2.jpeg'
+        allow_stretch: True
+        #keep_ratio: False
+
+<WasteToEnergy@ScrollView>:
+    do_scroll_x: False
+    WasteToEnergyChild:
+
+<WasteToEnergyChild@BoxLayout>:
+    size_hint_min_y: '650dp'
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        background_color: 48/255, 194/255, 141/255, 1
+        text: '[b]WASTE-TO-ENERGY[/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        markup: True
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: "[b]Waste-to-energy (WtE)[/b] converts diverse waste into energy, reducing landfill use and environmental impact.\n\nPresent methods include [b]incineration, anaerobic digestion, and landfill gas recovery.[/b]\n\n[b]Incineration[/b] burns waste for heat/electricity, with modern systems minimizing emissions.\n\n[b]Anaerobic digestion[/b] processes organic waste into biogas and nutrient-rich digestate.\n\n[b]Waste-to-Ethanol[/b] research aims to convert non-recyclable plastics into biofuel.\nPyrolysis breaks down waste at high temperatures, producing syngas, bio-oil, and char.\n\n[b]Microbial Fuel Cells[/b] may directly convert organic waste into electricity using microorganisms.\nWaste-to-Hydrogen technologies seek efficient conversion of waste into clean energy."        
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True

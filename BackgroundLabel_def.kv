@@ -1,0 +1,13 @@
+#BackgroundColor allows you to set any bg color for a LABEL
+<BackgroundColor@Widget>
+    background_color: 1, 1, 1, 1
+    canvas.before:
+        Color:
+            rgba: root.background_color
+        Rectangle:
+            size: self.size
+            pos: self.pos
+
+<BackgroundLabel@Label+BackgroundColor>
+    background_color: 0, 0, 0, 0
+#Now use BackgroundLabel in place of Label

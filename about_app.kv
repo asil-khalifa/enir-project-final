@@ -1,0 +1,30 @@
+<LayoutAboutApp@BoxLayout>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    BackgroundLabel:
+        text: '[b]ABOUT[/b]'
+        size_hint: 1, 0.2
+        font_size: '20dp'
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+
+    BackgroundLabel:
+        padding: '5dp', 0, '5dp', 0
+        text: 'This app was developed as a project for Energy and Environmental Engineering (ENIR11) by the group: "EcoVigil Engineers" using kivy module of python.\n\n[size=15sp][b]TEAM MEMBERS:[/b][/size]\nASIL KHALIFA (APP DEVELOPMENT)\n(Resource Collection & Content Creation):\nABHINANDAN REDDY J\nADEESH JAIN\nDIVYANSH KUMAR AGRAWAL\nLANKIREDDY HITESH REDDY\nNADIMINTI KALYAN VASANTH'
+        text_size: root.width, None
+        size: self.texture_size
+        background_color: 1, 1, 1, 1
+        color: 0, 0, 0, 1
+        markup: True
+    Button:
+        text: 'BACK'
+        size_hint: 1, 0.15
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 1, 0, 0, 0.9
+        on_press: app.manager.pop()

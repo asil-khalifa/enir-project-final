@@ -1,0 +1,138 @@
+<LayoutGovSchemes@ScrollView>:
+    do_scroll_x: False
+    LayoutGovSchemesBox:
+
+<LayoutGovSchemesBox@BoxLayout>:
+    size_hint_min_y: '650dp' #This sets the minimum total heigth of the boxlayout
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    orientation: 'vertical'
+    spacing: '15dp'
+    padding: [0, '15dp', 0, '15dp']
+    
+    Button:
+        text: 'THE NATIONAL ENVIRONMENTAL POLICY 2006'
+        text_size: root.width/1.15, None
+        size_hint: 0.9, 1
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        on_release:
+            app.gov_schemes_image_src = 'images/gov_schemes_nep_2006.jpeg'
+            app.manager.push('GovSchemesImageScreen')   
+
+    Button:
+        text: 'THE NATIONAL ENVIRONMENT APPELLATE AUTHORITY ACT 1997'
+        text_size: root.width/1.15, None
+        size_hint: 0.9, 1
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        on_release:
+            app.gov_schemes_image_src = 'images/gov_schemes_envi_apellate.jpeg'
+            app.manager.push('GovSchemesImageScreen')   
+
+    Button:
+        text: 'THE WATER (PREVENTION AND CONTROL OF POLLUTION) ACT, 1974'
+        text_size: root.width/1.15, None
+        size_hint: 0.9, 1
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        on_release:
+            app.gov_schemes_image_src = 'images/gov_schemes_water_pollution.jpeg'
+            app.manager.push('GovSchemesImageScreen')   
+
+    Button:
+        text: 'PUBLIC LIABILITY INSURANCE ACT'
+        text_size: root.width/1.2, None
+        size_hint: 0.9, 1
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        on_release:
+            app.gov_schemes_image_src = 'images/gov_schemes_public_liability.jpeg'
+            app.manager.push('GovSchemesImageScreen')   
+
+    Button:
+        text: '[b]CASE STUDY:[/b] BT COTTON BT BRINJAL CULTIVATION IN INDIA'
+        text_size: root.width/1.15, None
+        size_hint: 0.9, 1
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+        on_release:
+            app.gov_schemes_image_src = 'images/gov_schemes_brinjal.png'
+            app.manager.push('GovSchemesImageScreen')   
+    Button:
+        text: '[b]CASE STUDY:[/b] VEHICULAR AIR POLLUTION IN DELHI'
+        text_size: root.width/1.15, None
+        size_hint: 0.9, 1
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+        on_release:
+            app.gov_schemes_image_src = 'gov_schemes_delhi_pollution.jpeg'
+            app.manager.push('GovSchemesImageScreen')   
+    Button:
+        text: '[b]CASE STUDY:[/b] INTEGRATED WATER TREATMENT'
+        text_size: root.width/1.15, None
+        size_hint: 0.9, 1
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+        on_release:
+            app.gov_schemes_image_src = 'images/gov_schemes_integrated_water_treatment.jpeg'
+            app.manager.push('GovSchemesImageScreen')   
+    Button:
+        text: '[b]CASE STUDY:[/b] ORGANIC FARMING'
+        text_size: root.width/1.15, None
+        size_hint: 0.9, 1
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+        on_release:
+            app.gov_schemes_image_src = 'images/gov_schemes_organic_farming.jpeg'
+            app.manager.push('GovSchemesImageScreen')   
+    Button:
+        text: '[b]CASE STUDY:[/b] INNOVATIVE SOLUTION TO PLASTIC WASTE'
+        text_size: root.width/1.15, None
+        size_hint: 0.9, 1
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+        on_release:
+            app.gov_schemes_image_src = 'images/gov_schemes_plastic_waste_ahmed_khan.jpeg'
+            app.manager.push('GovSchemesImageScreen')   
+    Button:
+        text: "[b]CASE STUDY:[/b] PEOPLE'S PARTICIPATION IN CONSERVATION OF FORESTS"
+        text_size: root.width/1.15, None
+        size_hint: 0.9, 1
+        pos_hint: {'center_x':0.5}
+        background_normal: ''
+        background_color: 48/255, 194/255, 141/255, 1
+        markup: True
+        on_release:
+            app.gov_schemes_image_src = 'images/gov_schemes_conservation_of_forests.jpeg'
+            app.manager.push('GovSchemesImageScreen')   
+        
+<LayoutGovSchemesImage@BoxLayout>:
+    canvas.before:
+        
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    Image:
+        source: app.gov_schemes_image_src
+        allow_stretch: True
