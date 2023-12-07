@@ -78,7 +78,7 @@
         background_color: 48/255, 194/255, 141/255, 1
         markup: True
         on_release:
-            app.gov_schemes_image_src = 'gov_schemes_delhi_pollution.jpeg'
+            app.gov_schemes_image_src = 'images/gov_schemes_delhi_pollution.jpeg'
             app.manager.push('GovSchemesImageScreen')   
     Button:
         text: '[b]CASE STUDY:[/b] INTEGRATED WATER TREATMENT'
@@ -125,14 +125,9 @@
             app.gov_schemes_image_src = 'images/gov_schemes_conservation_of_forests.jpeg'
             app.manager.push('GovSchemesImageScreen')   
         
-<LayoutGovSchemesImage@BoxLayout>:
-    canvas.before:
-        
-        Color:
-            rgba: 1, 1, 1, 1
-        Rectangle:
-            pos: self.pos
-            size: self.size
+<LayoutGovSchemesImage@ScatterLayout>:
+    do_rotation: False
+
     Image:
         source: app.gov_schemes_image_src
         allow_stretch: True
